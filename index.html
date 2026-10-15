@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang ="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <tittle>Yuma Okamoto</tittle>
+        <link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#top">Yuma Okamoko</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#works">Works</a>
+            </nav>
+        </header>
+        <main>
+            <section id="top">
+                <div class="plane-group">
+                    <div class="contrail"></div>
+                    <div class="airplane">✈</div>
+                </div>
+                <img id="top-photo" src="./media/main.jpg">
+                <h1>
+                    Yuma Okamoto<br>
+                    portfolio
+                </h1>
+                <p id="weather-icon"> </p>
+            </section>
+            <section id="about">
+                <h3>About</h3>
+                <p>
+                    岡本悠磨<br>
+                    東京都市大学デザイン・データ科学部
+                </p>
+                <p>
+                    趣味：一人旅、飛行機に乗りまくる<br>
+                    特技：サッカー<br>
+                    スキル：python
+                </p>
+            </section>
+            <section id="works"></section>
+                <h3>Works</h3>
+                <div class="works-controls">
+                    <select id="category">
+                        <option value="all">すべてのカテゴリ</option>
+                    </select>
+                    <select id="sort">
+                        <option value="new">新しい順</option>
+                        <option value="old">古い順</option>
+                        <option value="title">タイトル順</option>
+                    </select>
+                </div>
+                <div id="works-grid"></div>
+            </section>
+        </main>
+        <footer>
+            <span>© 2026 Okamoto Yuma</span>
+        </footer>
+
+        <script src="works.js"></script>
+    </body>
+</html>

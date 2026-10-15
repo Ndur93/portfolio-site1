@@ -1,0 +1,252 @@
+* {box-sizing: border-box; }
+body{
+    background: #75bbe0;
+    color: #100000;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding: 0px 40px;
+    background: #d25353;
+    height: 75px;
+    top: 0;
+}
+nav {
+    display: flex;
+    gap: 28px;
+}
+nav a:hover {
+    color: #730cda
+}
+footer {
+    padding: 20px 38px;
+    font-size: 11px;
+}
+
+#works-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+}
+.work-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+.work-card {
+    border: 1px solid #561919
+}
+.work-card h4{
+    margin: 15px 15px 5px;
+}
+.work-card p {
+     margin: 0px 15px 15px;
+     font-size: 14px;
+     line-height: 1.6;
+}
+.work-card:however {
+    opacity: 0.7;
+}
+.work-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.works-controls select {
+    padding: 10px;
+    font-size: 16px;
+}
+.work-category {
+    font-size: 4px;
+    padding-top: 14px;
+    color: #2c10fc
+}
+.work-year {
+    font-size: 10px;
+    margin-top: 10px;
+}
+#top {
+    display: flex;
+    align-items: center;
+   
+    gap: 50px;
+
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+
+#top-photo {
+  width: 400px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top-text h1 {
+    font-size: 8rem;
+    margin: 0;
+}
+.top-text p{
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#top{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#top-photo{
+    width: 40%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.top-text h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* 空エリア */
+.sky{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 250px;
+
+    pointer-events: none;
+}
+
+/* 飛行機 */
+.airplane{
+    position: absolute;
+
+    font-size: 45px;
+
+    transform: rotate(-35deg);
+
+    animation: fly 15s linear infinite;
+}
+
+/* 飛行機雲 */
+.contrail{
+    position: absolute;
+
+    height: 4px;
+    width: 0;
+
+    background: rgba(255,255,255,0.8);
+    border-radius: 999px;
+
+    transform: rotate(-25deg);
+    transform-origin: left center;
+
+    animation: trail 15s linear infinite;
+}
+
+/* 飛行機の移動 */
+@keyframes fly{
+
+    0%{
+        left: 55%;
+        top: 220px;
+    }
+
+    100%{
+        left: 92%;
+        top: 20px;
+    }
+}
+
+/* 飛行機雲を伸ばす */
+@keyframes trail{
+
+    0%{
+        left: 58%;
+        top: 240px;
+        width: 0;
+    }
+
+    100%{
+        left: 58%;
+        top: 240px;
+        width: 440px;
+    }
+}
+/*スマートフォン*/
+@media screen and (max-width: 600px){
+    #top{
+        padding-top: 80px;
+    }
+    #top img{
+        width: 100%;
+    }
+    #works-grid {
+        grid-template-columns: 1fr;
+    }
+    .works-controls {
+        flex-direction: column;
+    }
+    .airplane{
+        font-size: 30px;
+    }
+    .contrail{
+        height: 3px;
+    }
+}
+.main-photo {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/*天気*/
+#weather-icon {
+    font-size: 60px;
+    margin: 0;
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+}
+/*晴れ*/
+
+body.weather-sunny .site-header {
+    background-color: #e6450a;
+}
+/*曇り*/
+
+body.weather-cloudy .site-header {
+    background-color: #abafb3fa;
+}
+/*雨*/
+
+body.weather-rainy .site-header {
+    background-color: #0b21e3;
+}
